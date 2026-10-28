@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paulo Braido — Full Stack Developer</title>
+<meta name="description" content="Full stack developer in Brazil. I build and run websites for city halls in the Amazon region, from PHP code to Linux servers. Open to remote work.">
+<meta property="og:title" content="Paulo Braido — Full Stack Developer">
+<meta property="og:description" content="PHP, TypeScript, WordPress, Linux and Cloudflare. Open to remote work.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F3F6F4;
+  --ink:#14231C;
+  --muted:#53645B;
+  --forest:#1E5A43;
+  --river:#2F6690;
+  --ipe:#E2B007;
+  --line:#CFD9D3;
+  --card:#FFFFFF;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --paper:#0F1A15; --ink:#E6EEE9; --muted:#9DB0A5; --forest:#6FC39F;
+    --river:#7FB2DA; --ipe:#F2C230; --line:#2A3B33; --card:#15231C;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Public Sans",system-ui,sans-serif;font-size:17px;line-height:1.6}
+a{color:var(--forest);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--ipe);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.mark{font-weight:900;letter-spacing:-.02em;font-size:18px;color:var(--ink);text-decoration:none}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.lang button{font:inherit;font-size:14px;border:0;background:none;color:var(--muted);padding:6px 14px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:40px 0 72px}
+h1{font-size:clamp(44px,7vw,84px);line-height:.95;letter-spacing:-.035em;font-weight:900;margin:0 0 20px}
+.lede{font-size:21px;line-height:1.5;max-width:30ch;margin:0 0 28px;color:var(--ink)}
+.facts{display:grid;grid-template-columns:repeat(3,auto);gap:4px 28px;justify-content:start;margin:0 0 32px}
+.facts dt{font-size:14px;color:var(--muted);order:2}
+.facts dd{order:1}
+.facts dd{margin:0;font-weight:700;font-size:20px}
+.facts div{display:flex;flex-direction:column}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:12px 20px;border-radius:8px;font-weight:700;text-decoration:none;font-size:16px}
+.btn.primary{background:var(--forest);color:#fff}
+@media (prefers-color-scheme: dark){.btn.primary{color:#0F1A15}}
+.btn.ghost{border:1.5px solid var(--ink);color:var(--ink)}
+
+figure.map{margin:0;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 18px 14px}
+figure.map svg{display:block;width:100%;height:auto}
+figure.map figcaption{font-size:14px;color:var(--muted);margin-top:8px;max-width:52ch}
+.grid line{stroke:var(--line);stroke-width:1}
+.grid text{fill:var(--muted);font-size:11px;font-family:inherit}
+.river{fill:none;stroke:var(--river);stroke-width:2.2;opacity:.55}
+.city circle.halo{fill:var(--ipe);opacity:.22}
+.city circle.dot{fill:var(--ipe);stroke:var(--ink);stroke-width:1.2}
+.city text{fill:var(--ink);font-size:13px;font-weight:700;font-family:inherit;paint-order:stroke;stroke:var(--card);stroke-width:4px;stroke-linejoin:round}
+.city.hq circle.dot{fill:var(--forest)}
+.city.hq circle.halo{fill:var(--forest)}
+@media (prefers-reduced-motion:no-preference){
+  .city circle.halo{animation:pulse 3.2s ease-out infinite;transform-box:fill-box;transform-origin:center}
+  .city:nth-of-type(2) circle.halo{animation-delay:.4s}.city:nth-of-type(3) circle.halo{animation-delay:.8s}
+  .city:nth-of-type(4) circle.halo{animation-delay:1.2s}.city:nth-of-type(5) circle.halo{animation-delay:1.6s}
+  .city:nth-of-type(6) circle.halo{animation-delay:2s}.city:nth-of-type(7) circle.halo{animation-delay:2.4s}
+}
+@keyframes pulse{0%{transform:scale(.6);opacity:.45}100%{transform:scale(1.8);opacity:0}}
+
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font-size:32px;letter-spacing:-.02em;line-height:1.15;margin:0 0 10px;font-weight:900}
+.intro{color:var(--muted);max-width:60ch;margin:0 0 32px}
+.work{list-style:none;margin:0;padding:0}
+.work li{display:grid;grid-template-columns:260px 1fr;gap:24px;padding:20px 0;border-bottom:1px solid var(--line)}
+.work li:last-child{border-bottom:0}
+.work h3{margin:0;font-size:19px;line-height:1.3}
+.work p{margin:0;max-width:62ch}
+.work .stack{display:block;color:var(--muted);font-size:15px;margin-top:6px}
+
+.projects{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.project{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px}
+.project h3{margin:0 0 6px;font-size:21px}
+.project p{margin:0 0 14px}
+.project .tech{color:var(--muted);font-size:15px;margin-bottom:14px}
+
+.stackgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.stackgrid h3{font-size:16px;margin:0 0 8px;color:var(--forest)}
+.stackgrid ul{list-style:none;margin:0;padding:0}
+.stackgrid li{padding:3px 0}
+
+.contact{padding:72px 0 80px}
+.contact h2{font-size:clamp(32px,5vw,52px);max-width:16ch}
+footer{color:var(--muted);font-size:14px;padding:24px 0 40px;border-top:1px solid var(--line)}
+
+[data-lang-pt]{display:none}
+html[lang="pt-BR"] [data-lang-en]{display:none}
+html[lang="pt-BR"] [data-lang-pt]{display:revert}
+
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr;gap:36px;padding-top:16px}
+  .work li{grid-template-columns:1fr;gap:6px}
+  .projects{grid-template-columns:1fr}
+  .stackgrid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:480px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  .facts{grid-template-columns:1fr 1fr}
+  .lede{font-size:19px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="mark" href="#">Paulo Braido</a>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-set="en" aria-pressed="true">EN</button>
+      <button type="button" data-set="pt-BR" aria-pressed="false">PT</button>
+    </div>
+  </header>
+
+  <main>
+  <div class="hero">
+    <div>
+      <h1>Paulo<br>Braido</h1>
+      <p class="lede">
+        <span data-lang-en>Full stack developer. I build and run the websites of city halls in the Brazilian Amazon, from the PHP code to the Linux server it runs on.</span>
+        <span data-lang-pt>Desenvolvedor full stack. Crio e mantenho os sites de prefeituras na Amazônia brasileira, do código PHP ao servidor Linux onde ele roda.</span>
+      </p>
+      <dl class="facts">
+        <div><dt><span data-lang-en>years in production</span><span data-lang-pt>anos em produção</span></dt><dd>2+</dd></div>
+        <div><dt><span data-lang-en>live sites I maintain</span><span data-lang-pt>sites no ar que mantenho</span></dt><dd>38</dd></div>
+        <div><dt><span data-lang-en>Ariquemes, Brazil</span><span data-lang-pt>Ariquemes, Brasil</span></dt><dd>UTC−4</dd></div>
+      </dl>
+      <div class="cta">
+        <a class="btn primary" href="https://www.linkedin.com/in/paulo-gabriel-prando-braido-77704323b/"><span data-lang-en>Message me on LinkedIn</span><span data-lang-pt>Fale comigo no LinkedIn</span></a>
+        <a class="btn ghost" href="https://github.com/Braido350"><span data-lang-en>See my GitHub</span><span data-lang-pt>Ver meu GitHub</span></a>
+      </div>
+    </div>
+
+    <figure class="map">
+      <svg viewBox="0 0 560 420" role="img" aria-labelledby="mapTitle">
+        <title id="mapTitle">Map of municipalities in Rondônia, Brazil, whose websites Paulo builds and maintains</title>
+        <g class="grid">
+          <line x1="40" y1="60" x2="555" y2="60"/><text x="0" y="64">10°S</text>
+          <line x1="40" y1="160" x2="555" y2="160"/><text x="0" y="164">11°S</text>
+          <line x1="40" y1="260" x2="555" y2="260"/><text x="0" y="264">12°S</text>
+          <line x1="40" y1="360" x2="555" y2="360"/><text x="0" y="364">13°S</text>
+          <line x1="100" y1="20" x2="100" y2="400"/><text x="86" y="416">65°W</text>
+          <line x1="200" y1="20" x2="200" y2="400"/><text x="186" y="416">64°W</text>
+          <line x1="300" y1="20" x2="300" y2="400"/><text x="286" y="416">63°W</text>
+          <line x1="400" y1="20" x2="400" y2="400"/><text x="386" y="416">62°W</text>
+          <line x1="500" y1="20" x2="500" y2="400"/><text x="486" y="416">61°W</text>
+          </g>
+        <!-- Guaporé and Mamoré rivers (Brazil–Bolivia border), simplified -->
+        <path class="river" d="M505 400 C 400 360, 260 330, 180 305 S 110 270, 100 250 S 70 170, 66 140 S 58 70, 60 30"/>
+        <g class="city hq"><circle class="halo" cx="295.9" cy="51.3" r="14"/><circle class="dot" cx="295.9" cy="51.3" r="6"/><text x="306" y="44">Ariquemes</text></g>
+        <g class="city"><circle class="halo" cx="268.1" cy="31.4" r="12"/><circle class="dot" cx="268.1" cy="31.4" r="5"/><text x="180" y="26">Alto Paraíso</text></g>
+        <g class="city"><circle class="halo" cx="353.4" cy="103.9" r="12"/><circle class="dot" cx="353.4" cy="103.9" r="5"/><text x="364" y="108">Jaru</text></g>
+        <g class="city"><circle class="halo" cx="404.9" cy="147.7" r="12"/><circle class="dot" cx="404.9" cy="147.7" r="5"/><text x="415" y="152">Ji-Paraná</text></g>
+        <g class="city"><circle class="halo" cx="66.1" cy="138.3" r="12"/><circle class="dot" cx="66.1" cy="138.3" r="5"/><text x="78" y="134">Guajará-Mirim</text></g>
+        <g class="city"><circle class="halo" cx="510.7" cy="355.5" r="12"/><circle class="dot" cx="510.7" cy="355.5" r="5"/><text x="402" y="346">Corumbiara</text></g>
+        <g class="city"><circle class="halo" cx="545.8" cy="371.7" r="12"/><circle class="dot" cx="545.8" cy="371.7" r="5"/><text x="390" y="392">Colorado do Oeste</text></g>
+      </svg>
+      <figcaption>
+        <span data-lang-en>Some of the municipalities in Rondônia, Brazil, whose websites and transparency portals I build and keep online.</span>
+        <span data-lang-pt>Alguns dos municípios de Rondônia cujos sites e portais da transparência eu crio e mantenho no ar.</span>
+      </figcaption>
+    </figure>
+  </div>
+
+  <section id="work">
+    <h2><span data-lang-en>What I do at work</span><span data-lang-pt>O que faço no trabalho</span></h2>
+    <p class="intro">
+      <span data-lang-en>My day-to-day code lives in my employer's private repositories, so here is what it does.</span>
+      <span data-lang-pt>Meu código do dia a dia fica nos repositórios privados da empresa, então aqui está o que ele faz.</span>
+    </p>
+    <ul class="work">
+      <li>
+        <h3><span data-lang-en>Public transparency portals</span><span data-lang-pt>Portais da transparência</span></h3>
+        <p><span data-lang-en>Built and deployed the transparency portals of Ariquemes, Jaru, Alto Paraíso and Ji-Paraná, where citizens check public spending. Each city runs its own instance on its own server.</span><span data-lang-pt>Criei e implantei os portais da transparência de Ariquemes, Jaru, Alto Paraíso e Ji-Paraná, onde o cidadão consulta os gastos públicos. Cada cidade roda sua própria instância no próprio servidor.</span>
+        <span class="stack">Windows Server · Cloudflare</span></p>
+      </li>
+      <li>
+        <h3><span data-lang-en>Municipal websites</span><span data-lang-pt>Sites de prefeituras</span></h3>
+        <p><span data-lang-en>Develop and maintain the official websites of city halls and councils such as Guajará-Mirim, Corumbiara and Colorado do Oeste.</span><span data-lang-pt>Desenvolvo e mantenho os sites oficiais de prefeituras e câmaras como Guajará-Mirim, Corumbiara e Colorado do Oeste.</span>
+        <span class="stack">WordPress · PHP</span></p>
+      </li>
+      <li>
+        <h3><span data-lang-en>WordPress plugins</span><span data-lang-pt>Plugins WordPress</span></h3>
+        <p><span data-lang-en>Backup Total restores content from UpdraftPlus backups and compares earlier versions. A second plugin sets up SMTP, enforces strong passwords, converts every image to WebP and copies its settings from one site to the next.</span><span data-lang-pt>O Backup Total restaura conteúdo de backups do UpdraftPlus e compara versões anteriores. Outro plugin configura SMTP, exige senha forte, converte todas as imagens para WebP e copia as configurações de um site para outro.</span>
+        <span class="stack">PHP</span></p>
+      </li>
+      <li>
+        <h3><span data-lang-en>Accessible institutional theme</span><span data-lang-pt>Tema institucional acessível</span></h3>
+        <p><span data-lang-en>A white-label Gutenberg theme for city halls that meets Brazil's public-transparency accessibility criteria: high contrast, text resizing, breadcrumbs and a sitemap.</span><span data-lang-pt>Tema white-label em Gutenberg para prefeituras que atende aos critérios de acessibilidade do PNTP: alto contraste, ajuste do tamanho do texto, trilha de navegação e mapa do site.</span>
+        <span class="stack">WordPress · PHP</span></p>
+      </li>
+      <li>
+        <h3><span data-lang-en>Hosting and security</span><span data-lang-pt>Hospedagem e segurança</span></h3>
+        <p><span data-lang-en>Run the server behind 38 sites, with Redis caching and every site behind Cloudflare for speed and DDoS protection. After a security incident, I restored a full backup onto a new VM in parallel so the sites stayed online, then rotated every credential.</span><span data-lang-pt>Administro o servidor dos 38 sites, com cache em Redis e todos os sites atrás da Cloudflare para velocidade e proteção contra DDoS. Depois de um incidente de segurança, restaurei um backup completo numa nova VM em paralelo para os sites não saírem do ar e troquei todas as credenciais.</span>
+        <span class="stack">Rocky Linux 8 · CWP7Pro · PHP-FPM 8.0–8.3 · Redis · Cloudflare</span></p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2><span data-lang-en>Personal projects</span><span data-lang-pt>Projetos pessoais</span></h2>
+    <p class="intro"><span data-lang-en>Open source, on my GitHub.</span><span data-lang-pt>Código aberto, no meu GitHub.</span></p>
+    <div class="projects">
+      <article class="project">
+        <h3>Cantina 2</h3>
+        <p><span data-lang-en>Order and inventory manager for school canteens and community events, rebuilt from scratch in TypeScript.</span><span data-lang-pt>Gerenciador de pedidos e estoque para cantinas escolares e eventos, refeito do zero em TypeScript.</span></p>
+        <div class="tech">Next.js · TypeScript · Tailwind CSS · React Hook Form · Zod</div>
+        <a href="https://github.com/Braido350/cantina2"><span data-lang-en>View code</span><span data-lang-pt>Ver código</span></a>
+      </article>
+      <article class="project">
+        <h3>Cantina</h3>
+        <p><span data-lang-en>First version of the canteen manager: products, customers, orders and sales reports, running in Docker.</span><span data-lang-pt>Primeira versão do gerenciador da cantina: produtos, clientes, pedidos e relatórios de vendas, rodando em Docker.</span></p>
+        <div class="tech">React · Next.js · PostgreSQL · Docker</div>
+        <a href="https://github.com/Braido350/cantina"><span data-lang-en>View code</span><span data-lang-pt>Ver código</span></a>
+      </article>
+    </div>
+  </section>
+
+  <section id="stack">
+    <h2><span data-lang-en>Tools I use</span><span data-lang-pt>Ferramentas que uso</span></h2>
+    <p class="intro"><span data-lang-en>Learning now: Docker, Kubernetes and backend architecture.</span><span data-lang-pt>Estudando agora: Docker, Kubernetes e arquitetura de backend.</span></p>
+    <div class="stackgrid">
+      <div><h3><span data-lang-en>Languages</span><span data-lang-pt>Linguagens</span></h3><ul><li>PHP</li><li>TypeScript</li><li>JavaScript</li><li>SQL</li></ul></div>
+      <div><h3>Web</h3><ul><li>WordPress</li><li>Gutenberg</li><li>React</li><li>Next.js</li></ul></div>
+      <div><h3><span data-lang-en>Infrastructure</span><span data-lang-pt>Infraestrutura</span></h3><ul><li>Linux</li><li>CWP7Pro</li><li>Cloudflare</li><li>Redis</li></ul></div>
+      <div><h3><span data-lang-en>Data and tools</span><span data-lang-pt>Dados e ferramentas</span></h3><ul><li>MySQL / MariaDB</li><li>PostgreSQL</li><li>Firebird</li><li>Git</li></ul></div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2><span data-lang-en>Open to remote roles with international teams.</span><span data-lang-pt>Aberto a vagas remotas, inclusive com times internacionais.</span></h2>
+    <div class="cta">
+      <a class="btn primary" href="https://www.linkedin.com/in/paulo-gabriel-prando-braido-77704323b/"><span data-lang-en>Message me on LinkedIn</span><span data-lang-pt>Fale comigo no LinkedIn</span></a>
+      <a class="btn ghost" href="https://github.com/Braido350"><span data-lang-en>See my GitHub</span><span data-lang-pt>Ver meu GitHub</span></a>
+    </div>
+  </section>
+  </main>
+
+  <footer>
+    <span data-lang-en>Paulo Gabriel Prando Braido. Bachelor's in Computer Systems Analysis, UNOPAR.</span>
+    <span data-lang-pt>Paulo Gabriel Prando Braido. Bacharel em Análise de Sistemas, UNOPAR.</span>
+  </footer>
+</div>
+<script>
+(function(){
+  var btns = document.querySelectorAll('.lang button');
+  function set(l){
+    document.documentElement.lang = l;
+    btns.forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.set === l ? 'true' : 'false'); });
+    try { localStorage.setItem('lang', l); } catch(e){}
+  }
+  btns.forEach(function(b){ b.addEventListener('click', function(){ set(b.dataset.set); }); });
+  var saved = null; try { saved = localStorage.getItem('lang'); } catch(e){}
+  if (saved) set(saved); else if ((navigator.language||'').toLowerCase().indexOf('pt') === 0) set('pt-BR');
+})();
+</script>
+</body>
+</html>
